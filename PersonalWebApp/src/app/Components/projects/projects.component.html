@@ -1,1 +1,20 @@
-<p>projects works!</p>
+<div class="container" id="projects">
+    <div class="jumbotron" style="background-color: beige;">
+        <table class="table" style="border:5px solid rgb(182, 255, 0);">
+            <tr style="background-color: burlywood; font-size: 12pt;">
+                <th>Project Name</th>
+                <th>Project Description</th>
+                <th>Languages</th>
+                <th>Tools</th>
+                <th>Date Created</th>
+            </tr>
+            <tr *ngFor="let project of projects" style="background-color:white" >
+                <td>{{project.projectName}}</td>
+                <td>{{project.projectDescription}}</td>
+                <td>{{project.languages}}</td>
+                <td>{{project.tools}}</td>
+                <td>{{project.dateCreated}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

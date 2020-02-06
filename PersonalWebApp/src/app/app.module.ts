@@ -7,6 +7,7 @@ import { CoursesComponent } from './Components/courses/courses.component';
 import { ProjectsComponent } from './Components/projects/projects.component';
 import { HomeComponent } from './Components/home/home.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

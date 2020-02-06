@@ -1,1 +1,18 @@
-<p>courses works!</p>
+<div class="container" id="courses">
+    <div class="jumbotron" style="background-color: beige;">
+        <table class="table" style="border:5px solid rgb(182, 255, 0);">
+            <tr style="background-color: burlywood; font-size: 12pt;">
+                <th>Course Name</th>
+                <th>Course Description</th>
+                <th>Course Link</th>
+                <th>Semester</th>
+            </tr>
+            <tr *ngFor="let course of courses" style="background-color:white" >
+                <td>{{course.courseName}}</td>
+                <td>{{course.courseDescription}}</td>
+                <td>{{course.courseLink}}</td>
+                <td>{{course.semester}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

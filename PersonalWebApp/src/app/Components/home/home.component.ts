@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
     this.getAbout();
   }
 
-  getAbout(){
-    this._aboutHttpSerice.getAbout().subscribe(
+ async getAbout(){
+    await this._aboutHttpSerice.getAbout().subscribe(
       response =>{
         this.about = response;
         this.firstIndex = this.about[0];

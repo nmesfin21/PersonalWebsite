@@ -13,4 +13,8 @@ export class AppComponent {
   toggleNavbar(){
     this.navbaropen = !this.navbaropen;
   }
+
+  getResume(){
+    window.open("Resume2.0.pdf", '_blank');
+  }
 }
