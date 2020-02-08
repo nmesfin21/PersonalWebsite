@@ -32,4 +32,8 @@ export class CoursesComponent implements OnInit {
     );
   }
 
+  followLink(){
+    window.open("https://www.google.com/")
+  }
+
 }

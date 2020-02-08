@@ -8,13 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'PersonalWebApp';
 
-  navbaropen = false;
-
-  toggleNavbar(){
-    this.navbaropen = !this.navbaropen;
-  }
-
-  getResume(){
-    window.open("Resume2.0.pdf", '_blank');
-  }
 }

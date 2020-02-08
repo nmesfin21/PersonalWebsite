@@ -10,7 +10,7 @@
             <tr *ngFor="let course of courses" style="background-color:white" >
                 <td>{{course.courseName}}</td>
                 <td>{{course.courseDescription}}</td>
-                <td>{{course.courseLink}}</td>
+                <td (click)="followLink()">{{course.courseLink}}</td>
                 <td>{{course.semester}}</td>
             </tr>
         </table>

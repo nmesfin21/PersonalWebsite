@@ -16,8 +16,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getAbout();
+
+
   }
 
+  
  async getAbout(){
     await this._aboutHttpSerice.getAbout().subscribe(
       response =>{

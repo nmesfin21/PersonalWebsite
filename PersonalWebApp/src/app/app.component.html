@@ -1,22 +1,6 @@
-<nav class="navbar navbar-expand-sm navbar-light" style="background-color:lightseagreen;">
-  <a class="navbar-brand" href="#">
-    <img src="../assets/images/myimage.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    Natnael 
-  </a>
-  <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup" [ngClass]="{'show': navbaropen}">
-    <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="#about">About <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#projects">Projects</a>
-      <a class="nav-item nav-link" href="#courses">Courses</a>
-      <button class="nav-item nav-link" (click)="getResume()">Resume</button>
-    </div>
-  </div>
-</nav>
 
-<app-home ></app-home>
+<app-top-nav></app-top-nav>
+<router-outlet></router-outlet>
 
 <!-- <div><label>PDF src</label><input type="text" placeholder="PDF src" [(ngModel)]="pdfSrc"></div><pdf-viewer [src]="pdfSrc" [render-text]="true" style="display: block;"></pdf-viewer>
  -->

@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color:lightseagreen;">
+    <a class="navbar-brand" href="/home">
+      <img src="../assets/images/myimage.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Natnael 
+    </a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup" [ngClass]="{'show': navbaropen}">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-item nav-link" href="/home">About <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href='/projects'>Projects</a>
+        <a class="nav-item nav-link" href='/courses'>Courses</a>
+        <a class="nav-item nav-link" (click)="getResume()">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+
