@@ -15,7 +15,7 @@ namespace PersonalWebDAL
             context = _context;
         }
 
-
+        #region Project Region
         // get all projects
         public List<Projects> GetAllProjects()
         {
@@ -25,7 +25,10 @@ namespace PersonalWebDAL
                          
             return projectList;
         }
-
+        #endregion
+        
+        
+        #region Course Region
         //get all courses
         public List<Courses> GetAllCourses()
         {
@@ -34,6 +37,32 @@ namespace PersonalWebDAL
             return courseList;
         }
 
+        //add courses
+        public string addCourse(string courseName, string courseDescription, string courseLink, string semester)
+        {
+            string status = "adding not successful";
+            try
+            {
+                var course = new Courses();
+                course.CourseName = courseName;
+                course.CourseDescription = courseDescription;
+                course.CourseLink = courseLink;
+                course.Semester = semester;
+
+                context.Courses.Add(course);
+                context.SaveChanges();
+                status = "adding course successful";
+            }
+            catch(Exception ex)
+            {
+                status = ex.Message;
+            }
+            return status;
+        }
+        #endregion
+
+
+        #region contact region
         //get contact info
         public List<ContactInfo> GetContacts()
         {
@@ -41,7 +70,9 @@ namespace PersonalWebDAL
                            select c).ToList();
             return contact;
         }
+        #endregion
 
+        #region about region
         //get about 
         public List<About> GetAbout()
         {
@@ -49,7 +80,9 @@ namespace PersonalWebDAL
                          select a).ToList();
             return about;
         }
+        #endregion
 
+        #region resume
         //get resume
         public List<Resumes> GetResumes()
         {
@@ -57,5 +90,6 @@ namespace PersonalWebDAL
                          select r).ToList();
             return res;
         }
+        #endregion
     }
 }

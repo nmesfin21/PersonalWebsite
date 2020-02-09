@@ -25,5 +25,9 @@ export class PerAppService {
     return this.http.get<ICourse[]>('https://localhost:44342/api/course/getallcourses');
   }
 
-  
+
+  errorHandler(error: HttpErrorResponse) {
+    console.error(error);
+    return throwError(error.message || "Server Error");
+  }
 }

@@ -44,13 +44,13 @@ namespace PersonalWebAPI
                 options.AddPolicy(MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.WithOrigins("http://localhost:4200",
-                                        "http://www.contoso.com");
+                    builder.WithOrigins("http://localhost:4200")
+                           .AllowAnyHeader();
                 });
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-            //services.AddControllers(); I comented out this.
+            services.AddControllers(); /*I comented out this.*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

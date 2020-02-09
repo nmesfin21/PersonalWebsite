@@ -23,6 +23,8 @@ namespace PersonalWebAPI.Controllers
             _repository = repository;
             _mapper = mapper;
         }
+
+        #region course
         // GET: api/Course
         [HttpGet]
         public JsonResult GetAllCourses()
@@ -45,6 +47,22 @@ namespace PersonalWebAPI.Controllers
             }
             return new JsonResult(courses);
         }
+
+        //POST: api/Course
+        public JsonResult AddCourse(Models.Course course)
+        {
+            string status = "adding course failed in controller";
+            try
+            {
+                status = _repository.addCourse(course.CourseName, course.CourseDescription, course.CourseLink, course.Semester);
+            }
+            catch(Exception ex)
+            {
+                status = ex.Message;
+            }
+            return new JsonResult(status);
+        }
+        #endregion
 
         //// GET: api/Course/5
         //[HttpGet("{id}", Name = "Get")]

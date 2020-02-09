@@ -7,6 +7,8 @@ import { CoursesComponent } from './Components/courses/courses.component';
 import { ProjectsComponent } from './Components/projects/projects.component';
 import { HomeComponent } from './Components/home/home.component';
 import { TopNavComponent } from './Components/top-nav/top-nav.component';
+import { AddCourseComponent } from './Components/admcomponents/add-course/add-course.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -15,12 +17,14 @@ import { TopNavComponent } from './Components/top-nav/top-nav.component';
     CoursesComponent,
     ProjectsComponent,
     HomeComponent,
-    TopNavComponent
+    TopNavComponent,
+    AddCourseComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
